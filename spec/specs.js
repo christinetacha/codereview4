@@ -17,3 +17,10 @@ describe("pizza", function() {
     expect(testPizza.price()).to.equal(16);
   });
 });
+
+describe("order", function() {
+  it("will create an object for user's order with the property for delivery", function() {
+    var testOrder = new Order();
+    expect(testOrder.pizzaDelivery()).to.equal("delivery");
+  });
+});
