@@ -4,4 +4,16 @@ describe("pizza", function() {
     expect(testPizza.pizzaSize).to.equal("small");
     expect(testPizza.toppingNumber).to.equal(2);
   });
+  it("will create a formula based on size and topping selection to find out the price of the pizza", function() {
+    var testPizza = new Pizza("small", 2);
+    expect(testPizza.price()).to.equal(12);
+  });
+  it("will add a new size condition to prototype price", function() {
+    var testPizza = new Pizza("medium", 2);
+    expect(testPizza.price()).to.equal(14);
+  });
+  it("will add a large size condition to prototype price", function() {
+    var testPizza = new Pizza("large", 2);
+    expect(testPizza.price()).to.equal(16);
+  });
 });
