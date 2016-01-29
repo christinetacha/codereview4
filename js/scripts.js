@@ -1,24 +1,52 @@
-function Pizza(pizzaSize, toppingNumber) {
+function Pizza(pizzaSize, toppings, price) {
   this.pizzaSize = pizzaSize;
-  this.toppingNumber = toppingNumber;
+  this.toppings = [];
+  this.price = 0;
 }
 
-Pizza.prototype.price = function() {
+Pizza.prototype.calculatePrice = function() {
   var total = 0;
   if (this.pizzaSize === "small") {
-    total = total + 10;
-  } else if(this.pizzaSize === "medium") {
-    total = total + 12;
-  } else if(this.pizzaSize === "large") {
-    total = total + 14;
+    this.price += 10;
+  } else if (this.pizzaSize === "medium") {
+    this.price += 12;
+  } else if (this.pizzaSize === "large")
+    this.price += 14;
+  } else {
+    return 16;
   }
-  total = total + this.toppingNumber;
-  return total;
 }
 
-function Order(pizzaDelivery) {
-  this.pizzaDelivery = pizzaDelivery;
-}
+// Pizza.prototype.price = function() {
+//   var total = 0;
+//   if (this.pizzaSize === "small") {
+//     total = total + 10;
+//   } else if(this.pizzaSize === "medium") {
+//     total = total + 12;
+//   } else if(this.pizzaSize === "large") {
+//     total = total + 14;
+//   }
+//   total = total + this.toppingNumber;
+//   return total;
+// }
+
+
+
+// function Order(pizzaDelivery, pizzaPickup) {
+//   this.pizzaDelivery = pizzaDelivery;
+//   this.pizzaPickup = pizzaPickup;
+// }
+//
+// Order.prototype.deliveryOrPickup = function() {
+//   var fee = 0;
+//   if (this.pizzaDelivery === "delivery") {
+//     fee = fee + 2;
+//   } else if (this.pizzaPickup === "pickup") {
+//     fee === 0;
+//   }
+//   total = total + fee + this.toppingNumber;
+//   return total;
+// }
 
 // $(function() {
 //   $("#pizzaOrder").submit(function(event) {
