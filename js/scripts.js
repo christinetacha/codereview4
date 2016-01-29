@@ -25,9 +25,9 @@ function Order(pizzaDelivery) {
 //
 //     var size = $('input[name=size]:checked', '#pizzaOrder').val();
 //     var toppings = $('input[name=toppings]:checked', '#pizzaOrder').val();
-//     var deliveryOrPickup = $('input[name=deliveryOrPickup]:checked', '#pizzaOrder').val();
+//     // var deliveryOrPickup = $('input[name=deliveryOrPickup]:checked', '#pizzaOrder').val();
 //
-//     var userPizza = new Pizza(size, toppings, deliveryOrPickup)
+//     var userPizza = new Pizza(pizzaSize, toppingNumber)
 //
 //     $("#appendHere").text(userPizza.cost());
 //
@@ -36,7 +36,7 @@ function Order(pizzaDelivery) {
 //  });
 
 
-//
+// working code for the basics
 // function Pizza(pizzaSize, toppingNumber) {
 //   this.pizzaSize = pizzaSize;
 //   this.toppingNumber = toppingNumber;
