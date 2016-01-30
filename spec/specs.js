@@ -1,14 +1,14 @@
 describe("pizza", function() {
   it("will create a pizza object with the properties of size and topping selections and price", function() {
-    var testPizza = new Pizza("small", 2, 12);
+    var testPizza = new Pizza("small", ["canadian bacon", "pineapple"]);
     expect(testPizza.pizzaSize).to.equal("small");
-    expect(testPizza.toppings).to.equal([]);
+    expect(testPizza.toppings).to.eql(["canadian bacon", "pineapple"]);
     expect(testPizza.price).to.equal(0);
   });
-  it("will calculate the price of the pizza based on size", function() {
-    var testPizza = new Pizza("small", 2, 12);
+  it("will calculate the price of the pizza based on size and toppings", function() {
+    var testPizza = new Pizza("small", ["canadian bacon", "pineapple"]);
     expect(testPizza.pizzaSize).to.equal("small");
-    expect(testPizza.calculatePrice).to.equal(10);
+    expect(testPizza.calculatePrice()).to.equal(12);
   });
   // it("will create a formula based on size and topping selection to find out the price of the pizza", function() {
   //   var testPizza = new Pizza("small", 2);
