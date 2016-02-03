@@ -18,6 +18,18 @@ Pizza.prototype.calculatePrice = function() {
   return this.price;
 }
 
+$(document).ready(function) {
+var toppingArray = [];
+  $('input[type="checkbox"]:checked').each(function() {
+    toppingArray.push($(this.toppings.length).val());
+  });
+  $("#appendHere").text(userPizza(this.price));
+
+    event.preventDefault();
+});
+
+
+
 
 // Pizza.prototype.price = function() {
 //   var total = 0;
